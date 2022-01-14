@@ -82,11 +82,13 @@ public class ComputerErrorMarkController {
             results.add(new DiagnosticResult(arrErrors.get(i), arrSolutions.get(i), values[i]));
         }
 
-
         //sort value big -> small
         results.sort(Comparator.comparing(DiagnosticResult::getValue).reversed());
+
         return ResponseEntity.status(HttpStatus.OK).body(
                 new ResponseObject("ok", "Query successfully", results));
+
+
     }
 
     @PostMapping
