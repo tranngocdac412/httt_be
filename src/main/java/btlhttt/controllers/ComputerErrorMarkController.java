@@ -87,8 +87,6 @@ public class ComputerErrorMarkController {
 
         return ResponseEntity.status(HttpStatus.OK).body(
                 new ResponseObject("ok", "Query successfully", results));
-
-
     }
 
     @PostMapping
